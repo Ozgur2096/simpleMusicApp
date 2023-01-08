@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font-awesome link -->
+    <link rel="stylesheet" href="./font-awesome/css/all.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <h1>Music Player</h1>
+    <div class="song-list">
+      <div class="song" id="nice">Nice</div>
+      <div class="song" id="myFavorite">My Favorite</div>
+      <div class="song" id="myFavorite2">My Favorite 2</div>
+      <div class="song" id="myFavorite3">My Favorite 3</div>
+      <div class="song" id="balalayka1">Balalayka1</div>
+      <div class="song" id="myMelody">My Melody</div>
+      <div class="song" id="setarehSinging">Setareh Singing</div>
+      <div class="song" id="setarehSinging2">Setareh Singing 2</div>
+      <div class="song" id="seventeen">Seventeen</div>
+      <div class="song" id="song1">Song1</div>
+      <div class="song" id="song2">Song2</div>
+      <div class="song" id="viejosTiempos">Los Viejos Tiempos</div>
+      <div class="song" id="viejosTiempos2">Los Viejos Tiempos 2</div>
+      <div class="song" id="yollar">Yollar</div>
+    </div>
+
+    <div class="music-container">
+      <div class="music-info">
+        <h4 id="title">My Melody</h4>
+        <div class="progress-container">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <audio src="./music/myMelody.mp4" id="audio"></audio>
+      <div class="img-container">
+        <img src="./images/leeuwarden.png" alt="music-cover" id="cover" />
+      </div>
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
