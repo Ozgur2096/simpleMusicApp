@@ -7,6 +7,8 @@ const progress = document.querySelector('.progress');
 const progressContainer = document.querySelector('.progress-container');
 const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
+const displayCurrentTime = document.querySelector('#current-time');
+const displayWholeTime = document.querySelector('#whole-time');
 
 const songArray = document.querySelectorAll('.song');
 // gereksiz yere yazdim bunlari, ustteki satir hallediyor aslinda :)
@@ -95,6 +97,26 @@ function updateProgress(e) {
   const { duration, currentTime } = e.srcElement;
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
+
+  // my adjustments
+  let retSecCurrent = '';
+  let retMinCurrent = '';
+  currentTime / 60 < 10 ? (retMinCurrent = '0') : (retMinCurrent = '');
+  currentTime % 60 < 10 ? (retSecCurrent = '0') : (retSecCurrent = '');
+  displayCurrentTime.innerText = `${retMinCurrent}${(currentTime / 60).toFixed(
+    0
+  )} : ${retSecCurrent}${(currentTime % 60).toFixed(0)}`;
+
+  let retSecWhole = '';
+  let retMinWhole = '';
+  duration / 60 < 10 ? (retMinWhole = '0') : (retMinWhole = '');
+  duration % 60 < 10 ? (retSecWhole = '0') : (retSecWhole = '');
+  displayWholeTime.innerText = `${retMinWhole}${Math.floor(
+    duration / 60
+  )} : ${retSecWhole}${Math.floor(duration % 60)}`;
+
+  console.log(duration / 60);
+  console.log(duration);
 }
 
 function setProgress(e) {

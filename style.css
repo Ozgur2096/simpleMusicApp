@@ -101,6 +101,14 @@ body{
   transform: translateY(0%);
   transition: transform 0.3s ease-in, opacity 0.3s ease-in;
 }
+.music-info .title-and-time {
+  display: flex;
+  justify-content: space-between;
+}
+.music-info .title-and-time #current-time,
+.music-info .title-and-time #whole-time {
+  color:rgb(93, 176, 176)
+}
 .music-info h4 {
   margin: 0;
 }
