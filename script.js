@@ -112,8 +112,8 @@ function updateProgress(e) {
   duration / 60 < 10 ? (retMinWhole = '0') : (retMinWhole = '');
   duration % 60 < 10 ? (retSecWhole = '0') : (retSecWhole = '');
   displayWholeTime.innerText = `${retMinWhole}${Math.floor(
-    duration / 60
-  )} : ${retSecWhole}${Math.floor(duration % 60)}`;
+    duration / 60 || 0
+  )} : ${retSecWhole}${Math.floor(duration % 60 || 0)}`;
 
   console.log(duration / 60);
   console.log(duration);
